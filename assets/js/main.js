@@ -209,3 +209,74 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+//  document.addEventListener("DOMContentLoaded", function () {
+//    const serviceLinks = document.querySelectorAll(".services-list a");
+//    const serviceSections = document.querySelectorAll(".service-details.section");
+//
+//    // Set initial visible section
+//    serviceSections[0].classList.add("active");
+//
+//    serviceLinks.forEach(link => {
+//      link.addEventListener("click", function (e) {
+//        e.preventDefault();
+//
+//        // Get the target section ID from href
+//        const targetId = this.getAttribute("href").replace("#", "");
+//        const targetSection = document.getElementById(targetId);
+//
+//        if (!targetSection || targetSection.classList.contains("active")) return;
+//
+//        // Fade out current
+//        const currentSection = document.querySelector(".service-details.section.active");
+//        if (currentSection) {
+//          currentSection.classList.remove("active");
+//          setTimeout(() => {
+//            // After fade out completes, fade in target
+//            serviceSections.forEach(section => section.style.display = "none"); // hide all
+//            targetSection.style.display = "block";
+//            setTimeout(() => targetSection.classList.add("active"), 10); // small delay to trigger fade-in
+//          }, 300);
+//        }
+//
+//        // Update active link
+//        serviceLinks.forEach(link => link.classList.remove("active"));
+//        this.classList.add("active");
+//      });
+//    });
+//  });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const serviceLinks = document.querySelectorAll(".services-list a");
+  const serviceSections = document.querySelectorAll(".service-details.section");
+
+  // Set initial section
+  if (serviceSections.length > 0) {
+    serviceSections[0].classList.add("active");
+  }
+
+  serviceLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (!targetSection || targetSection.classList.contains("active")) return;
+
+      // Remove .active from all sections
+      serviceSections.forEach(section => section.classList.remove("active"));
+
+      // Add .active to target
+      targetSection.classList.add("active");
+
+      // Update active link
+      serviceLinks.forEach(link => link.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+});
+
+
+

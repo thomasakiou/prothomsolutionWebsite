@@ -921,6 +921,10 @@ section,
   color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
 }
 
+.about p {
+color: var(--contrast-color);
+}
+
 .about .content ul {
   list-style: none;
   padding: 0;
@@ -973,7 +977,7 @@ section,
   width: 12px;
   height: 12px;
   opacity: 1;
-  background-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  background-color: color-mix(in srgb, var(--contrast-color), transparent 80%);
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet-active {
@@ -1023,7 +1027,7 @@ section,
 .services .service-item {
   background-color: var(--surface-color);
   text-align: center;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border: 1px solid color-mix(in srgb, var(--contrast-color), transparent 85%);
   padding: 80px 20px;
   height: 100%;
   transition: all ease-in-out 0.3s;
@@ -1059,6 +1063,7 @@ section,
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  color: var(--contrast-color);
 }
 
 .services .service-item:hover {
@@ -1199,7 +1204,7 @@ section,
 }
 
 .portfolio .portfolio-item .portfolio-info p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 30%);
   font-size: 14px;
   margin-bottom: 0;
   padding-right: 50px;
@@ -1211,7 +1216,7 @@ section,
   right: 50px;
   font-size: 24px;
   top: calc(50% - 14px);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 30%);
   transition: 0.3s;
   line-height: 0;
 }
@@ -1234,6 +1239,9 @@ section,
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
+.stats p{
+color: var(--contrast-color);
+}
 .stats .stats-item {
   padding: 10px;
 }
@@ -1254,7 +1262,7 @@ section,
 }
 
 .stats .stats-item p {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 40%);
   padding: 15px 0 0 0;
   margin: 0;
   font-family: var(--heading-font);
@@ -1421,6 +1429,7 @@ section,
   align-items: center;
 }
 
+
 .team .team-member .social a:hover {
   color: var(--default-color);
   background: var(--accent-color);
@@ -1445,7 +1454,7 @@ section,
   display: block;
   font-size: 13px;
   font-weight: 400;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 40%);
 }
 
 .team .team-member:hover .social {
@@ -1563,7 +1572,7 @@ section,
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-bottom: 1px solid color-mix(in srgb, var(--contrast-color), transparent 85%);
 }
 
 .portfolio-details .portfolio-info ul {

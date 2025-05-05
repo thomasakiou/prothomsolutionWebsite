@@ -122,29 +122,20 @@
         <p>This page is for account deletion.</p>
         <!--      Form section-->
         <div class="col-lg-8">
-          <form action="#" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+          <form id="myForm" action="#" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
             <div class="row gy-4">
               <div class="col-md-6">
-                <input type="username" name="name" class="form-control" placeholder="Username" required="">
+                <input type="text" name="name" class="form-control" placeholder="Username" required>
               </div>
 
-              <div class="col-md-6 ">
-                <input type="email" class="form-control" name="email" placeholder="email" required="">
+              <div class="col-md-6">
+                <input type="email" class="form-control" name="email" placeholder="Email" required>
               </div>
-
-              <!--            <div class="col-md-12">-->
-              <!--              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">-->
-              <!--            </div>-->
-
-              <!--            <div class="col-md-12">-->
-              <!--              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>-->
-              <!--            </div>-->
 
               <div class="col-md-12 text-center">
-                <div class="loading">Loading</div>
-<!--                <div class="error-message"></div>-->
-                <div class="sent-message">Your request have been submited. Thank you!</div>
-                <button type="submit">Delete</button>
+                <div class="loading" style="display:none;">Loading...</div>
+                <div class="sent-message" style="display:none;">Your request has been received. Thank you!</div>
+                <button type="submit">Submit</button>
               </div>
             </div>
           </form>
@@ -248,6 +239,30 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+  <script>
+    const form = document.getElementById('myForm');
+    const loading = form.querySelector('.loading');
+    const sentMessage = form.querySelector('.sent-message');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent actual form submission
+
+      // Show loading
+      loading.style.display = 'block';
+      sentMessage.style.display = 'none';
+
+      // Simulate delay (e.g., submitting data to server)
+      setTimeout(() => {
+        loading.style.display = 'none';
+        sentMessage.style.display = 'block';
+
+        // Optionally clear form fields
+        form.reset();
+      }, 2000); // 2 seconds delay
+    });
+  </script>
 
 </body>
 

@@ -1509,7 +1509,7 @@ color: var(--contrast-color);
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
-  color: var(--default-color);
+  color: var(--contrast-color);
   background-color: color-mix(in srgb, var(--background-color), transparent 50%);
   border-color: color-mix(in srgb, var(--contrast-color), transparent 20%);
 }
@@ -1523,7 +1523,7 @@ color: var(--contrast-color);
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 20%);
 }
 
 .contact .php-email-form button[type=submit] {
